@@ -26,14 +26,11 @@ app.get("/api/hello", function (req, res) {
 
 // API endpoint that will return time
 app.get("/api/:date?", (req,res) => {
-  try {
-    new Date(req.params.date)
-  }
-  catch (error) {
-    res.json({error: "Invalid Date"});
-  }
   if (req.params.date) {
     if (new Date(req.params.date)=='Invalid Date') {
+      if (new Date(parseInt(req.params.date))=='Invalid Date') {
+        res.json({error: "Invalid Date"});
+      }
       res.json({"unix": new Date(parseInt(req.params.date)).getTime(),
         "utc": new Date(parseInt(req.params.date)).toUTCString()
       })
