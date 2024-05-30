@@ -26,14 +26,18 @@ app.get('/api/hello', function(req, res) {
 // Create object that contains all short urls
 let shortURLs = [];
 let counter = 1;
-const regex = /^(https|http):\/\/www.[0-9a-z]+(.com|.org|.net|.co|.us|.edu|.ai|.io|.gov|.info|.site)$/i
+// const regex = /^(https|http):\/\/www.[0-9a-z]+(.com|.org|.net|.co|.us|.edu|.ai|.io|.gov|.info|.site)$/i
+const regex = /^(https:\/\/|http:\/\/)(www.)?[0-9a-z\-\.]*(\.com|\.org|\.net|\.co|\.us|\.edu|\.ai|\.io|\.gov|\.info|\.site)/i
 
 // short URL post call
 app.post('/api/shorturl', (req,res) => {
+  console.log(req.body.url)
   if (regex.test(req.body.url)) {
     const dnsurl = req.body.url.replace(
-      /^(https|http):\/\/www./,''
+      /^(https|http):\/\/(www.)?/,''
+      // /^(https|http):\/\//,''
     )
+    .replace(/(\.com|\.org|\.net|\.co|\.us|\.edu|\.ai|\.io|\.gov|\.info|\.site).*/i,'$1')
     console.log(dnsurl)
     dns.lookup(dnsurl,(err) => {
       if (err) return res.json({error: 'invalid url'});
