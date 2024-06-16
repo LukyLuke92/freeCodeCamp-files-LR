@@ -1,0 +1,71 @@
+# i in [2,3,4,5], j in [10, 25, 50, 100]
+Completed run for 2 moves and 25 memory size - minimum win rate of 40.476190476190474
+Completed run for 2 moves and 50 memory size - minimum win rate of 46.50145772594752
+Completed run for 2 moves and 100 memory size - minimum win rate of 48.057259713701434
+Completed run for 3 moves and 25 memory size - minimum win rate of 53.76661742983752
+Completed run for 3 moves and 50 memory size - minimum win rate of 54.308093994778076
+Completed run for 3 moves and 100 memory size - minimum win rate of 51.00401606425703
+Completed run for 4 moves and 25 memory size - minimum win rate of 45.64032697547684
+Completed run for 4 moves and 50 memory size - minimum win rate of 51.60857908847185
+Completed run for 4 moves and 100 memory size - minimum win rate of 56.97674418604651
+Completed run for 5 moves and 25 memory size - minimum win rate of 43.96887159533074
+Completed run for 5 moves and 50 memory size - minimum win rate of 43.66576819407008
+Completed run for 5 moves and 100 memory size - minimum win rate of 48.99057873485868
+    n_moves  mem_size  min_win_rate
+0       2.0      25.0     40.476190
+1       2.0      50.0     46.501458
+2       2.0     100.0     48.057260
+3       3.0      25.0     53.766617
+4       3.0      50.0     54.308094
+5       3.0     100.0     51.004016
+6       4.0      25.0     45.640327
+7       4.0      50.0     51.608579
+8       4.0     100.0     56.976744
+9       5.0      25.0     43.968872
+10      5.0      50.0     43.665768
+11      5.0     100.0     48.990579
+   n_moves  mem_size  min_win_rate
+8      4.0     100.0     56.976744
+# i in [4], j in [80, 90, 100, 110, 120]
+Completed run for 4 moves and 80 memory size - minimum win rate of 53.49162011173184
+Completed run for 4 moves and 90 memory size - minimum win rate of 54.83425414364641
+Completed run for 4 moves and 100 memory size - minimum win rate of 56.232686980609415
+Completed run for 4 moves and 110 memory size - minimum win rate of 54.61956521739131
+Completed run for 4 moves and 120 memory size - minimum win rate of 57.19794344473008
+   n_moves  mem_size  min_win_rate
+0      4.0      80.0     53.491620
+1      4.0      90.0     54.834254
+2      4.0     100.0     56.232687
+3      4.0     110.0     54.619565
+4      4.0     120.0     57.197943
+   n_moves  mem_size  min_win_rate
+4      4.0     120.0     57.197943
+# i in [4], j in [115, 120, 125, 130, 150]
+Completed run for 4 moves and 120 memory size - minimum win rate of 57.422969187675065
+Completed run for 4 moves and 125 memory size - minimum win rate of 54.89417989417989
+Completed run for 4 moves and 130 memory size - minimum win rate of 56.011315417256014
+Completed run for 4 moves and 150 memory size - minimum win rate of 55.72207084468664
+   n_moves  mem_size  min_win_rate
+0      4.0     115.0     56.875834
+1      4.0     120.0     57.422969
+2      4.0     125.0     54.894180
+3      4.0     130.0     56.011315
+4      4.0     150.0     55.722071
+   n_moves  mem_size  min_win_rate
+1      4.0     120.0     57.422969
+# i in [4], j in [118, 119, 120, 121, 122]
+Completed run for 4 moves and 118 memory size - minimum win rate of 56.43693107932379
+Completed run for 4 moves and 119 memory size - minimum win rate of 57.12401055408971
+Completed run for 4 moves and 120 memory size - minimum win rate of 56.5406976744186
+Completed run for 4 moves and 121 memory size - minimum win rate of 57.48987854251012
+Completed run for 4 moves and 122 memory size - minimum win rate of 56.35876840696118
+   n_moves  mem_size  min_win_rate
+0      4.0     118.0     56.436931
+1      4.0     119.0     57.124011
+2      4.0     120.0     56.540698
+3      4.0     121.0     57.489879
+4      4.0     122.0     56.358768
+   n_moves  mem_size  min_win_rate
+3      4.0     121.0     57.489879
+# Running main.py results in reproducible win rate of 62.4% with n_moves=4 and mem_size=120
+# Not sure why there is a discrepancy here

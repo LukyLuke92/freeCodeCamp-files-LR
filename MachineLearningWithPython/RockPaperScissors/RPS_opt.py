@@ -14,7 +14,7 @@
 import numpy as np
 import random as rnd
 
-def player(prev_play, opponent_history=[]):
+def player(prev_play, n_moves, move_memory, opponent_history=[]):
     if prev_play:
         opponent_history.append(prev_play)
 
@@ -22,8 +22,6 @@ def player(prev_play, opponent_history=[]):
     ideal_move = {'R': 'P','P': 'S','S': 'R'} # this is a converter from move to winning move
     move_to_idx = {'R': 0,'P': 1,'S': 2} # this is just a converter from move to index
     idx_to_move = ['R','P','S'] # inverse of the above, don't need an object, just list
-    n_moves = 4 # this is the number of moves for which conditional probabilities will be saved
-    move_memory = 120 # this is the number of moves to calculate probability distributions over
     prob_mat = update_probs(prev_play,n_moves,move_memory,opponent_history)
 
     # If there are not enough data to calculate prob_mat, just randomly choose
